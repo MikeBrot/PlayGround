@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <meta name="theme-color" content="#9bd7e9" />
+  <title>STARSPRINT — Skyway Run</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="game-shell">
+    <canvas id="game" aria-label="3D-Plattformspiel"></canvas>
+    <div class="grain" aria-hidden="true"></div>
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Starsprint Start"><span class="brand-mark">✦</span><span>STARSPRINT<span class="brand-sub"> / SKYWAY RUN</span></span></a>
+      <div class="top-actions"><span class="live"><i></i> ARCADE RUN</span><button class="sound-btn" id="soundBtn" aria-label="Ton umschalten">♫ <span>TON AN</span></button></div>
+    </header>
+    <section class="hud" id="hud" aria-live="polite">
+      <div class="hud-card distance-card"><span class="hud-label">STRECKE</span><strong><span id="distance">000</span><small>m</small></strong><div class="progress-track"><i id="progress"></i></div></div>
+      <div class="hud-card coin-card"><span class="coin-icon">✦</span><strong id="coins">00</strong><span class="hud-label">FUNKEN</span></div>
+      <div class="hud-card lives-card"><span class="hud-label">HERZEN</span><strong id="hearts">♥ ♥ ♥</strong></div>
+    </section>
+    <div class="toast" id="toast"></div>
+    <aside class="controls-hint" id="controlsHint"><span class="keycap">A</span><span class="keycap">D</span><span>SPUR WECHSELN</span><b>·</b><span class="keycap wide">SPACE</span><span>SPRINGEN</span></aside>
+    <div class="crosshair" aria-hidden="true"><i></i><b></b></div>
+    <section class="overlay" id="overlay">
+      <div class="overlay-panel">
+        <div class="eyebrow"><span class="eyebrow-line"></span> EIN NEUES ARCADE-ABENTEUER</div>
+        <h1 id="overlayTitle">DER HIMMEL<br><em>GEHÖRT DIR.</em></h1>
+        <p id="overlayCopy">Spring über schwebende Inseln, schnapp dir die Sternfunken und finde den Weg zum Wolkentor. Ein Retro-Abenteuer aus der Ich-Perspektive.</p>
+        <div class="title-stats"><span><b>✦</b> 16-BIT-ENERGIE</span><span><b>↗</b> 3D AUS DER ICH-PERSPEKTIVE</span></div>
+        <button class="primary-btn" id="playBtn"><span>ABHEBEN</span><b>↗</b></button>
+        <div class="overlay-foot"><span>WASD / PFEILTASTEN ZUM STEUERN</span><span>SPACE ZUM SPRINGEN</span></div>
+      </div>
+      <div class="title-badge"><div class="badge-star">✦</div><span>LEVEL 01</span><b>SKYWAY</b></div>
+    </section>
+    <div class="mobile-controls" id="mobileControls">
+      <button class="touch-btn left-btn" data-action="left" aria-label="Links">←</button>
+      <button class="touch-btn jump-btn" data-action="jump" aria-label="Springen"><span>↑</span><small>SPRING</small></button>
+      <button class="touch-btn right-btn" data-action="right" aria-label="Rechts">→</button>
+    </div>
+    <footer class="bottomline"><span>WIND IN DEN OHREN. STERNE IN REICHWEITE.</span><span>01 — CLOUDTOP CIRCUIT</span></footer>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
